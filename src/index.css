@@ -25,6 +25,13 @@
   text-decoration: none;
   padding: 6px;
 }
+@media (max-width:385px) {
+  .navbar .links{
+    display: flex;
+    flex-direction: column;
+   
+  }
+}
 .navbar a:hover {
   color: #f1356d;
 }
@@ -33,34 +40,48 @@
   margin: 40px auto;
   padding: 20px;
 }
-.blog-perview{
+.blog-perview {
   padding: 10px 16px;
-  margin: 20px 0;
-  border-right:2px solid black;
+  margin: 40px 0;
+  border-right: 2px solid black;
   background: linear-gradient(to left, black 50%, white 50%);
   background-size: 200% 100%;
   background-position: left bottom;
   transition: all 0.7s ease-out;
 }
-.blog-perview:hover  {
+.blog-perview:hover {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   background-position: right bottom;
-  
-  
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
 }
 .blog-perview h2 {
   font-size: 1.2rem;
   color: #f1356d;
   margin-bottom: 8px;
-  
 }
-.blog-perview p{
+.blog-perview p {
   text-align: center;
   font-size: 16px;
-  line-height: 30px; 
-  transition: all .3s ease-out;
+  line-height: 30px;
+  transition: all 0.3s ease-out;
   display: block;
 }
-.blog-perview:hover p{
+.blog-perview:hover p {
   color: white;
+}
+
+.btn {
+  background-color: #f1356d;
+  color: wheat;
+  border-radius: 10px;
+  padding: 7px 15px;
+  margin: 10px;
+  border-style: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }
