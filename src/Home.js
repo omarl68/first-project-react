@@ -10,7 +10,7 @@ const Home = () => {
     setAge(30);
     console.log(name);
   }; */
-  const [blogs, setBlogs] = useState([
+  const [blogs , setBlogs ] = useState([
     {
       title: "My new website",
       body: "lorem ipsum ...",
@@ -36,12 +36,16 @@ const Home = () => {
       id: 4,
     },
   ]);
+  const handlDelete = (id) => {
+    const newBlogs = blogs.filter(blog => blog.id !== id);
+    setBlogs(newBlogs);
+  };
   return (
     <div className="home">
-      <BlogList blogs={blogs} title="All Blogs!" />
       <BlogList
-        blogs={blogs.filter((blog) => blog.author === "mario")}
-        title="mario Blogs!"
+        blogs={blogs}
+        title="All Blogs!"
+        handlDelete={handlDelete}
       />
     </div>
   );
